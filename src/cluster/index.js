@@ -61,6 +61,7 @@ module.exports = class Cluster {
     isolationLevel,
     instrumentationEmitter = null,
     offsets = new Map(),
+    getMetadataBrokers,
   }) {
     this.rootLogger = rootLogger
     this.logger = rootLogger.namespace('Cluster')
@@ -93,6 +94,7 @@ module.exports = class Cluster {
       authenticationTimeout,
       reauthenticationThreshold,
       metadataMaxAge,
+      getMetadataBrokers,
     })
     this.committedOffsetsByGroup = offsets
   }

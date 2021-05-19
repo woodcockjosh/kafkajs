@@ -50,6 +50,7 @@ module.exports = class Client {
     socketFactory = defaultSocketFactory(),
     logLevel = INFO,
     logCreator = LoggerConsole,
+    getMetadataBrokers,
   }) {
     this[PRIVATE.OFFSETS] = new Map()
     this[PRIVATE.LOGGER] = createLogger({ level: logLevel, logCreator })
@@ -80,6 +81,7 @@ module.exports = class Client {
         allowAutoTopicCreation,
         maxInFlightRequests,
         isolationLevel,
+        getMetadataBrokers,
       })
   }
 
