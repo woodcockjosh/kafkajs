@@ -173,7 +173,7 @@ export type Assigner = {
 }
 
 export interface RetryOptions {
-  restartOnFailure: Promise<boolean>
+  restartOnFailure: Promise<boolean> | boolean
   maxRetryTime?: number
   initialRetryTime?: number
   factor?: number
